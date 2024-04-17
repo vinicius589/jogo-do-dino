@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game{
+    width: 120%;
+    height: 95vh;
+    border-bottom: 2px solid rgb(4, 7, 4);
+    margin: 0 auto;
+    position: absolute;
+}
+
+button {
+    background: rgb(6, 9, 6);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    padding: 1rem;
+    position: absolute;
+    right: 50vw;
+    top: 50vh;
+    cursor: pointer;
+    z-index: 1;
+}
+button:hover {
+    border: 2px solid rgb(5, 7, 5);
+    background: none;
+    color: rgb(3, 5, 3);
+}
+
+.game-over h1 {
+    font-size: 4rem;
+    color: red;
+    text-align: center;
+    margin-top: 15rem;
+}
+
+.game-over {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.322);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.cactus {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 160px;
+    margin-top: 15rem;
+}
+
+.dino{
+    width: 180px;
+    position: absolute;
+    bottom: 0;
+}
+
+.clouds {
+    width: 550px;
+    position: absolute;
+    top: 0;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+.cactus-animation {
+    animation: cactus-animation 3s infinite linear;
+}
+
+@keyframes cactus-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.jump {
+    animation: jump 800ms ease-out;
+}
+
+@keyframes jump {
+    0% {
+        bottom:0;
+    }
+
+    40% {
+        bottom: 200px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
